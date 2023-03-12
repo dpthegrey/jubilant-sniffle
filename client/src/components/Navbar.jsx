@@ -37,7 +37,7 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
           <FlexBetween
-            backgroundColor={theme.pallete.background.alt}
+            backgroundColor={theme.palette.background.alt}
             borderRadius="9px"
             gap="3rem"
             p="0.1rem 1.5rem"
@@ -47,20 +47,20 @@ const Navbar = () => {
               <Search />
             </IconButton>
           </FlexBetween>
+        </FlexBetween>
 
-          {/* RIGHT SIDE */}
-          <FlexBetween gap="1.5rem">
-            <IconButton onClick={() => dispatch(setMode())}>
-              {theme.pallete.mode === "dark" ? (
-                <DarkModeOutlined sx={{ fontsize: "25px" }} />
-              ) : (
-                <LightModeOutlined sx={{ fontsize: "25px" }} />
-              )}
-            </IconButton>
-            <IconButton>
-              <SettingsOutlined sx={{ fontSize: "25px" }} />
-            </IconButton>
-          </FlexBetween>
+        {/* RIGHT SIDE */}
+        <FlexBetween gap="1.5rem">
+          <IconButton onClick={() => dispatch(setMode())}>
+            {theme.palette.mode === "dark" ? (
+              <DarkModeOutlined sx={{ fontsize: "25px" }} />
+            ) : (
+              <LightModeOutlined sx={{ fontsize: "25px" }} />
+            )}
+          </IconButton>
+          <IconButton>
+            <SettingsOutlined sx={{ fontSize: "25px" }} />
+          </IconButton>
         </FlexBetween>
       </Toolbar>
     </AppBar>
